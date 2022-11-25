@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class CadastroTransportadoraController extends Controller
 {
     public function cadastrotransportadora() {
-        return view('site.cadastrotransportadora');
+        return view('site.transportadora.cadastrotransportadora');
     }
 }
