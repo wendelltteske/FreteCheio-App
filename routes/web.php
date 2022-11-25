@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/', [\App\Http\Controllers\PrincipalController::class, 'principal'])->name('site.principal');
+Route::get('/login', [\App\Http\Controllers\LoginController::class, 'login'])->name('site.login');
+Route::get('/sobrenos', [\App\Http\Controllers\SobreNosController::class, 'sobrenos'])->name('site.sobrenos');
+Route::get('/contato', [\App\Http\Controllers\ContatoController::class, 'contato'])->name('site.contato');
+
+Route::prefix('/transportadora')->group(function(){
+    Route::get('/perfiltransportadora', [\App\Http\Controllers\PerfilTransportadoraController::class, 'perfiltransportadora'])->name('transportadora.perfiltransportadora');
+    Route::get('/cadastrotransportadora', [\App\Http\Controllers\CadastroTransportadoraController::class, 'contato'])->name('transportadora.cadastrotransportadora');
 });
+
+Route::prefix('/motorista')->group(function(){
+    Route::get('/cadastro_motorista', [\App\Http\Controllers\CadastroMotoristaController::class, 'cadastro_motorista'])->name('motorista.perfil_motorista');
+    Route::get('/perfil_motorista', [\App\Http\Controllers\PerfilMotoristaController::class, 'perfil_motorista'])->name('motorista.perfil_motorista');
+});
+
