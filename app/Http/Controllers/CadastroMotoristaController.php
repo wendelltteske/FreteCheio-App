@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CadastroMotoristaController extends Controller
 {
-    public function cadastro_motorista() {
+    public function cadastromotorista() {
         return view('site.motorista.cadastro_motorista');
     }
 }

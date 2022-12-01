@@ -10,11 +10,13 @@ body {
     padding: 50px;
     background-color: #00be8e;
 }
+
 .container {
     display: flex;
-    height: auto;
+    height: 89vh;
     background-color: #dddcdc;
 }
+
 .container-text {
     padding: 16px;
     width: 35%;
@@ -39,6 +41,7 @@ body {
     align-items: center;
     margin-top: 25%;
 }
+
 .container-text ul a {
     width: 70%;
     padding: 20px;
@@ -98,17 +101,21 @@ body {
 .box {
     margin-left: 5%;
     width: 60%;
-    height: 70%;
+    height: 65%;
     margin-top: 12.5%;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 12px;
     box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
+}
+
+.box img {
+    width: 100px;
 }
 
 .box p {
     color: #1dd973;
     margin-top: -20px;
-    font-size: 1.3rem;
+    font-size: 24px;
     font-weight: 300;
 }
 
@@ -119,9 +126,4 @@ body {
     margin-top: 25%;
     margin-left: 5%;
     box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
-}
-
-#logo:hover {
-    transform: translateY(-5px);
-    transition: all 0.75s ease 0s;
 }

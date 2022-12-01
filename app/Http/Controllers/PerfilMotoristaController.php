@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PerfilMotoristaController extends Controller
 {
     public function perfil_motorista() {
-        return view('site.perfil_motorista');
+        return view('site.motorista.perfil_motorista');
     }
 }

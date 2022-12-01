@@ -1,7 +1,9 @@
-<footer class="bg-light text-center text-lg-start">
 
+<link rel="stylesheet" href="{{ asset('css/site/footer.css') }}">
+
+<footer class="teste">
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="text-center p-3" class="copyright">
         © 2022 Copyright:
         <a class="text-dark" href="">CEDUP</a>
     </div>
