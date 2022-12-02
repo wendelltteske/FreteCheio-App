@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("nome")->notnull();
             $table->string("cpf/cnpj")->notnull();
-            $table->string("numero_cnh")->notnull();
+            $table->string("numero")->notnull();
             $table->string("telefone")->notnull();
             $table->string("numero_cnh")->notnull();
             $table->string("foto_frontal_cnh")->nullable();
