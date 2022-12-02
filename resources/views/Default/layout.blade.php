@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/site/footer.css') }}">
   <link rel="stylesheet" href="{{ asset('css/Bootstrap/bootstrap.css') }}">
+
+  <script src="{{ asset('js/Jquery/jquery.js') }}"></script>
+  <script src="{{ asset('js/Bootstrap/bootstrap.js') }}"></script>
+  <script src="{{ asset('js/Jquery/jquery.mask.min.js') }}"></script>
 </head>
 <body>
     @include('Default.header')
