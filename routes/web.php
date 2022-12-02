@@ -26,16 +26,21 @@ use Illuminate\Support\Facades\Route;
 //     Route::get('/perfil_motorista', [\App\Http\Controllers\PerfilMotoristaController::class, 'perfil_motorista'])->name('motorista.perfil_motorista');
 //     Route::get('/login_motorista', [\App\Http\Controllers\LoginMotoristaController::class, 'login_motorista'])->name('motorista.login_motorista');
 // });
+Route::get('/', function () {
+    return view('site.index');
+})->name('site.index');
 
 Route::get('/cadastro', function () {
     return view('site.motorista.cadastro_motorista');
-});
+})->name('site.cadastro');
+
 Route::namespace('\App\Http\Controllers')->group(function () {
     Route::Resource('/transportadora', "EmpresaController",)->names("transportadora")->parameters(['transportadora' => 'Empresa']);
     Route::Resource('/motorista', "MotoristaController",)->names("motorista")->parameters(['motorista' => 'motorista']);
+    
     // Route::get('/','PrincipalController')->name('site.principal');
     // Route::get('/login', 'LoginController')->name('site.login');
     // Route::get('/sobrenos', 'SobreNosController')->name('site.sobrenos');
     // Route::get('/contato', 'ContatoController')->name('site.contato');
-   
+
 });

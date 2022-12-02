@@ -1,8 +1,8 @@
 <!-- ***** Header Area Start ***** -->
 
-<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.5s" data-wow-delay="0s">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Colocar LOGO AQUI</a>
+<header class="header-area header-sticky wow slideInDown " data-wow-duration="0.5s" data-wow-delay="0s">
+  <nav class="navbar navbar-expand-lg " >
+    <a class="navbar-brand" href="#"><img id="logo_header" src="{{ asset('img/img.meio/logo-app-png.png') }}" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

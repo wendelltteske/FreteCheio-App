@@ -16,6 +16,7 @@ class MotoristaController extends Controller
     public function index()
     {
         //
+        
     }
 
     /**
@@ -26,6 +27,7 @@ class MotoristaController extends Controller
     public function create()
     {
         //
+        return view('site.motorista.cadastro_motorista');
     }
 
     /**
