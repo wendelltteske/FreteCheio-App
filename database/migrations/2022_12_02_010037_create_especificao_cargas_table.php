@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('carga_servico', function (Blueprint $table) {
+        Schema::create('especificao_cargas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('carga_id')->references('id')->on('carga');
-            $table->foreignId('servico_id')->references('id')->on('servico');
+            $table->foreignId('cargas_id')->references('id')->on('cargas');
+            $table->foreignId('caracteristica_cargas_id')->references('id')->on('caracteristica_cargas');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carga_servico');
+        Schema::dropIfExists('especificao_carga');
     }
 };

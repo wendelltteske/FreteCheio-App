@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="{{ asset('css/site/modal.css') }}">
 
-<h2>Bottom Modal</h2>
+{{-- <h2>Bottom Modal</h2> --}}
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+{{-- <button id="myBtn">Open Modal</button> --}}
 
 <!-- The Modal -->
 <div id="myModal" class="modal">

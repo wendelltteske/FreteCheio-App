@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('especificacao_caminhao', function (Blueprint $table) {
+        Schema::create('ponto_cargas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('caminhao_id')->references('id')->on('caminhao');
-            $table->foreignId('caracteristica_caminhao_id')->references('id')->on('caracteristica_caminhao');
+            $table->string('nome');
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('especificacao_caminhao');
+        Schema::dropIfExists('ponto_carga');
     }
 };

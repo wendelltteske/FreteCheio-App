@@ -13,9 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ponto_carga', function (Blueprint $table) {
+        Schema::create('caminhoes', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
+            $table->foreignId('motoristas_id')->references('id')->on('motoristas');
+            $table->string("modelo")->notnull();
+            $table->string("marca")->notnull();
+            $table->year("ano")->notnull();
+            $table->float("peso_max")->notnull();
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ponto_carga');
+        Schema::dropIfExists('caminhao');
     }
 };

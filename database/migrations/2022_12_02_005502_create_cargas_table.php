@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('carga', function (Blueprint $table) {
+        Schema::create('cargas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('empresa_id')->references('id')->on('empresa');
+            $table->foreignId('empresas_id')->references('id')->on('empresas');
             $table->float('peso')->notnull();
             $table->float('largura')->notnull();
             $table->float('comprimento')->notnull();

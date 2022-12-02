@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('caminhao', function (Blueprint $table) {
+        Schema::create('caracteristica_cargas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('motorista_id')->references('id')->on('motorista');
-            $table->string("modelo")->notnull();
-            $table->string("marca")->notnull();
-            $table->year("ano")->notnull();
-            $table->float("peso_max")->notnull();
+            $table->string('nome');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('caminhao');
+        Schema::dropIfExists('caracteristicas_carga');
     }
 };

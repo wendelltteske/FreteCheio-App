@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('servico', function (Blueprint $table) {
+        Schema::create('servicos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('motorista_id')->references('id')->on('motorista');
-            $table->foreignId('caminhao_id')->references('id')->on('caminhao');
+            $table->foreignId('motoristas_id')->references('id')->on('motoristas');
+            $table->foreignId('caminhoes_id')->references('id')->on('caminhoes');
             $table->float("valor_frete")->notnull();
             $table->datetime("data_aceite")->nulllabel();
             $table->datetime("data_incio_servico")->nulllabel();

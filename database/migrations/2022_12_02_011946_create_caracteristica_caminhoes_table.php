@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('caracteristica_carga', function (Blueprint $table) {
+        Schema::create('caracteristica_caminhoes', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
+            $table->text('descricao');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('caracteristicas_carga');
+        Schema::dropIfExists('caracteristica_caminhao');
     }
 };

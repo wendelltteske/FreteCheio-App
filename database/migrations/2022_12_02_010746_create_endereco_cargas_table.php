@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('endereco_empresa', function (Blueprint $table) {
+        Schema::create('endereco_cargas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('empresa_id')->references('id')->on('empresa');
+            $table->foreignId('cargas_id')->references('id')->on('cargas');
+            $table->foreignId('ponto_cargas_id')->references('id')->on('ponto_cargas');
             $table->string('cep')->notnull();
             $table->string('rua')->notnull();
             $table->string('numero')->notnull();
@@ -23,8 +24,6 @@ return new class extends Migration
             $table->string('bloco')->nullable();
             $table->text('observacoes')->nullable();
             $table->timestamps();
-
-
         });
     }
 
@@ -35,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('endereco_empresa');
+        Schema::dropIfExists('endereco_carga');
     }
 };
