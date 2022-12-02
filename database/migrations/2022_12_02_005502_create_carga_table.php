@@ -20,6 +20,7 @@ return new class extends Migration
             $table->float('largura')->notnull();
             $table->float('comprimento')->notnull();
             $table->float('altura')->notnull();
+            $table->datetime("data_entrega")->notnull();
             $table->text('descricao')->nullable();
             $table->timestamps();
         });
