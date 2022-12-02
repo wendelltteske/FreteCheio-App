@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('motoristas', function (Blueprint $table) {
             $table->id();
             $table->string("nome")->notnull();
-            $table->string("cpf/cnpj")->notnull();
-            $table->string("numero")->notnull();
+            $table->string("cpf_cnpj")->notnull();
             $table->string("telefone")->notnull();
             $table->string("numero_cnh")->notnull();
             $table->string("foto_frontal_cnh")->nullable();

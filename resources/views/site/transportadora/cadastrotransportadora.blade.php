@@ -10,7 +10,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="">CPF</label>
-                <input type="text" class="form-control" id="" placeholder="Digite seu CPF"name ="cpf">
+                <input type="text" class="form-control" id="" placeholder="Digite seu CPF"name ="cnpj">
             </div>
         </div>
         <div class="form-row">

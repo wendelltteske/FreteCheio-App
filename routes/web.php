@@ -28,11 +28,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/cadastro', function () {
-    return view('site.transportadora.cadastrotransportadora');
+    return view('site.motorista.cadastro_motorista');
 });
 Route::namespace('\App\Http\Controllers')->group(function () {
     Route::Resource('/transportadora', "EmpresaController",)->names("transportadora")->parameters(['transportadora' => 'Empresa']);
-
+    Route::Resource('/motorista', "MotoristaController",)->names("motorista")->parameters(['motorista' => 'motorista']);
     // Route::get('/','PrincipalController')->name('site.principal');
     // Route::get('/login', 'LoginController')->name('site.login');
     // Route::get('/sobrenos', 'SobreNosController')->name('site.sobrenos');
